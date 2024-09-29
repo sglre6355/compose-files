@@ -1,0 +1,9 @@
+[submodule "haproxy-config"]
+	path = haproxy-config
+	url = https://github.com/sglre6355/haproxy-config.git
+[submodule "jupyterlab-config"]
+	path = jupyterlab-config
+	url = https://github.com/sglre6355/jupyterlab-config
+[submodule "jupyterlab-work"]
+	path = jupyterlab-work
+	url = https://github.com/sglre6355/jupyterlab-work

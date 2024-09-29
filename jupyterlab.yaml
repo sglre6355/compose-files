@@ -1,0 +1,14 @@
+services:
+  jupyterlab:
+    container_name: jupyterlab
+    image: quay.io/jupyter/scipy-notebook:latest
+    user: root
+    volumes:
+      - ./jupyterlab-work:/home/${USER}/work
+      - ./jupyterlab-config/.jupyter:/home/${USER}/.jupyter
+    network_mode: host
+    environment:
+      NB_USER: ${USER}
+      CHOWN_HOME: "yes"
+      CHOWN_EXTRA: ".jupyter,work"
+      CHOWN_EXTRA_OPTS: "-R"

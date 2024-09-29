@@ -1,0 +1,10 @@
+services:
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy
+    volumes:
+      - /etc/ssl/certs:/etc/ssl/certs:ro
+      - ./haproxy-config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    network_mode: host
+    env_file:
+      - ./haproxy-config/haproxy.env

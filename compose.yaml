@@ -1,0 +1,9 @@
+services:
+  haproxy:
+    extends:
+      file: haproxy.yaml
+      service: haproxy
+  jupyterlab:
+    extends:
+      file: jupyterlab.yaml
+      service: jupyterlab
